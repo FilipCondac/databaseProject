@@ -1,12 +1,12 @@
 <?php
 	include 'conn.php';
-	/*if (!empty($_GET)) {
+	 (!empty($_GET)) {
 		$id = htmlspecialchars($_GET['id']);
 		$attended = htmlspecialchars($_GET['attended']);
 		$sql = "UPDATE `appointment_tbl` SET `appointment_attended`= $attended WHERE `appointment_id`= $id;";
 		$params = array();
 		$data = setData($sql,$params,false); 
-	}*/
+	}
 	$sql = "SELECT * FROM `appointment2_view`";
 	$params = array();
 	$data = getData($sql,$params,false);
@@ -23,7 +23,8 @@
 	//var_dump($owners);
 
 	if(isset($_POST['submit'])){
-        $sql = "INSERT INTO `patient_tbl` ('patient_name' , 'animal_type', 'animal_sex' , 'animal_age' , 'aliment' , 'animal_allergy' , 'owner_id') VALUES ('".$_POST["patient_name"] . "','" .$_POST["animal_type"]. "','" .$_POST["animal_sex"] . "','" .$_POST["animal_age"] . "','" .$_POST["aliment"] . "','" .$_POST["animal_allergy"] . "','" .$_POST["owner_id"] . "')";
+		$sql = "INSERT INTO `patient_tbl` ('patient_name' , 'animal_type', 'animal_sex' , 'animal_age' , 'aliment' , 'animal_allergy' , 'owner_id') VALUES ('".$_POST["patient_name"] . "','" .$_POST["animal_type"]. "','" .$_POST["animal_sex"] . "','" .$_POST["animal_age"] . "','" .$_POST["aliment"] . "','" .$_POST["animal_allergy"] . "','" .$_POST["owner_id"] . "')";
+		
     } 
 	
 ?>
